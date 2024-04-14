@@ -1,0 +1,15 @@
+/*
+
+# do not ignore these:
+!dunst/
+!fish/
+!hypr/
+!kitty/
+!neofetch/
+!rofi/
+!swww/
+!waybar/
+!wlogout/
+!README.
+!starship.toml
+!.gitignore

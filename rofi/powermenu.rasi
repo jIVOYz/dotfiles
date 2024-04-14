@@ -1,0 +1,23 @@
+configuration {
+  modi: "dmenu";
+  icon-theme: "Papirus";
+  show-icons: true;
+  terminal: "alacritty";
+  location: 0;
+  disable-history: false;
+  hide-scrollbar: true;
+  display-dmenu: "  Apps";
+}
+
+@theme "theme.rasi"
+
+#window {
+    location: northeast;
+    width: 256;
+}
+
+mainbox {
+    background-color: @base;
+}
+
+

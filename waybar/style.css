@@ -1,0 +1,64 @@
+@import url("./themes/solarized-light.css");
+
+* {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+window#waybar {
+  background-color: @base;
+}
+
+#workspaces {
+  padding: 2px 0;
+}
+
+#workspaces button {
+  transition: 0.3s all;
+  padding: 0;
+  margin: 0 4px;
+  color: @neutral3;
+}
+
+#workspaces button:hover {
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  color: @magenta;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 2px 8px;
+  /* background-color: @base; */
+  padding: 2px 12px;
+  border-radius: 16px;
+}
+
+#cpu,
+#memory,
+#clock,
+#network,
+#backlight,
+#pulseaudio,
+#custom-power,
+#custom-updates,
+#tray,
+#window,
+#language {
+  padding: 0px 6px;
+  color: @green;
+}
+
+#custom-spotify {
+  color: @green;
+  padding: 0 12px;
+  border-radius: 12px;
+}
+/**/
+#custom-logo {
+  color: @blue;
+  margin-right: 8px;
+}

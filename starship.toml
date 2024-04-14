@@ -1,0 +1,6 @@
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[󰈺 ](bold green)'
+[git_branch]
+symbol = '🌱 '
+truncation_length = 4
+truncation_symbol = ''

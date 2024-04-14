@@ -1,0 +1,116 @@
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "Gruvbox-Plus-Dark";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  Apps";
+    display-run: "  Run ";
+    display-window: "  Window";
+    display-Network: "󰤨  Network";
+    sidebar-mode: true;
+}
+@theme "theme.rasi"
+
+element-text, element-icon , mode-switcher {
+background-color: inherit;
+text-color:       inherit;
+}
+
+window {
+width: 720px;
+height: 360px;
+background-color: @base2;
+border-radius: 10px;
+}
+
+mainbox {
+background-color: @base2;
+}
+
+inputbar {
+children: [prompt,entry];
+background-color: @base2;
+border-radius: 5px;
+padding: 2px;
+}
+
+prompt {
+background-color: @base01;
+padding: 6px;
+text-color: @base2;
+border-radius: 3px;
+margin: 20px -15px 0px 10px;
+}
+
+textbox-prompt-colon {
+expand: false;
+str: ":";
+}
+
+entry {
+padding: 6px;
+margin: 20px 0px 0px 10px;
+text-color: @base01;
+background-color: @base2;
+border-radius: 0px 4px 4px 0px;
+border: 2px;
+border-color: @base01;
+}
+
+listview {
+border: 0px 0px 0px;
+padding: 6px;
+margin: 10px 0px 0px 10px;
+columns: 2;
+lines: 5;
+background-color: @base2;
+}
+
+element {
+padding: 12px 8px;
+background-color: @base2;
+text-color: @base01;
+}
+
+element-icon {
+size: 32px;
+}
+
+element selected {
+background-color:  @base1;
+text-color: @base2;
+border-radius: 4px;
+}
+
+mode-switcher {
+spacing: 0;
+}
+
+button {
+padding: 10px;
+background-color: @base1;
+vertical-align: 0.5;
+horizontal-align: 0.5;
+}
+
+button selected {
+background-color: @base0;
+}
+
+message {
+background-color: @base02;
+margin: 2px;
+padding: 2px;
+border-radius: 5px;
+}
+
+textbox {
+padding: 6px;
+margin: 20px 0px 0px 20px;
+text-color: @blue;
+background-color: @base02;
+}

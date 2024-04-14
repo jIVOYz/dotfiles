@@ -1,0 +1,162 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 24, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["custom/logo", "hyprland/workspaces", "tray"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": [
+    "hyprland/language",
+    "group/hardware",
+    "pulseaudio",
+    "clock",
+    "custom/power",
+  ],
+
+  "custom/spotify": {
+    "exec": "/usr/bin/python3 ~/.config/hypr/scripts/mediaplayer.py --player spotify",
+    "format": " {}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause --player spotify",
+    "on-click-right": "playerctl next --player spotify",
+    "on-click-middle": "playerctl previous --player spotify",
+    "on-scroll-up": "playerctl -p spotify volume 0.1+",
+    "on-scroll-down": "playerctl -p spotify volume 0.1-",
+    "max-length": 25,
+    "escape": true,
+    "tooltip": true,
+  },
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+  },
+
+  "hyprland/window": {
+    "format": "    {}",
+    "separate-outputs": true,
+    "rewrite": {
+      "${USER}@${set_sysname}:(.*)": "$1 ",
+      "(.*) — Mozilla Firefox": "$1 󰈹",
+      "(.*)Mozilla Firefox": "Firefox 󰈹",
+      "(.*) - Visual Studio Code": "$1 󰨞",
+      "(.*)Visual Studio Code": "Code 󰨞",
+      "(.*) — Dolphin": "$1 󰉋",
+      "(.*)Spotify": "Spotify 󰓇",
+      "(.*)Steam": "Steam 󰓓",
+    },
+    "max-length": 48,
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    },
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10,
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "󰅐  {:%H:%M}",
+    "format-alt": "{:%a %d %b}",
+  },
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "RAM: {}%",
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": " ({signalStrength}%)",
+    "format-ethernet": " ",
+    "tooltip-format": " {ifname} via {gwaddr}",
+    "format-linked": " (No IP)",
+    "format-disconnected": "󰖪",
+    "format-alt": "{ifname}: {ipaddr}",
+  },
+
+  "hyprland/language": {
+    "format": "{short}",
+  },
+
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", "󰕾 "],
+    },
+    "on-click": "~/.config/hypr/scripts/rofi_volume_menu.sh",
+  },
+
+  "custom/power": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/rofi_power_menu.sh",
+  },
+
+  "custom/updates": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": "",
+      "updated": "󰍕",
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates",
+  },
+
+  "custom/wallpaper": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/swwallpaper.sh",
+    "tooltip": "Random wallpaper",
+  },
+
+  "custom/logo": {
+    "format": "󰣇",
+    "on-click": "~/.config/hypr/scripts/rofi_launcher.sh",
+  },
+
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+    },
+
+    "modules": ["network", "cpu", "memory", "custom/updates"],
+  },
+
+  // "custom/media": {
+  //     "format": "{icon} {}",
+  //     "return-type": "json",
+  //     "max-length": 40,
+  //     "format-icons": {
+  //         "spotify": "",
+  //         "default": "🎜"
+  //     },
+  //     "escape": true,
+  //     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+  //     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+  // }
+}

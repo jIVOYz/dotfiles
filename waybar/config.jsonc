@@ -9,8 +9,11 @@
   "modules-center": ["custom/spotify"],
   "modules-right": [
     "hyprland/language",
-    "group/hardware",
+    "cpu",
+    "memory",
+    "network",
     "pulseaudio",
+    "custom/updates",
     "clock",
     "custom/power",
   ],
@@ -62,15 +65,15 @@
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "󰅐  {:%H:%M}",
+    "format": "󰅐  {:%a %d %b - (%H:%M)}",
     "format-alt": "{:%a %d %b}",
   },
   "cpu": {
-    "format": "CPU: {usage}%",
+    "format": "   {usage}%",
     "tooltip": false,
   },
   "memory": {
-    "format": "RAM: {}%",
+    "format": "    {}%",
   },
   "backlight": {
     // "device": "acpi_video1",
@@ -117,10 +120,10 @@
   },
 
   "custom/updates": {
-    "format": "{icon} {}",
+    "format": "{icon}  {}",
     "return-type": "json",
     "format-icons": {
-      "has-updates": "",
+      "has-updates": "󰮯",
       "updated": "󰍕",
     },
     "exec-if": "which waybar-module-pacman-updates",

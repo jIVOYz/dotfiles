@@ -31,7 +31,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-  margin: 2px 8px;
+  /* margin: 2px 8px; */
   /* background-color: @base; */
   padding: 2px 12px;
   border-radius: 16px;
@@ -57,8 +57,56 @@ window#waybar {
   padding: 0 12px;
   border-radius: 12px;
 }
-/**/
+
+#tray {
+  border-radius: 16px;
+  background: @neutral0;
+  padding: 0 10px;
+}
+
 #custom-logo {
   color: @blue;
   margin-right: 8px;
+}
+
+#cpu {
+  color: @red;
+  border-bottom: 2px solid @red;
+}
+
+#memory {
+  color: @blue;
+  border-bottom: 2px solid @blue;
+}
+
+#network {
+  color: @yellow;
+  border-bottom: 2px solid @yellow;
+}
+
+#pulseaudio {
+  color: @cyan;
+  border-bottom: 2px solid @cyan;
+}
+
+#clock {
+  color: @magenta;
+  border-bottom: 2px solid @magenta;
+}
+
+#language {
+  color: @orange;
+  border-bottom: 2px solid @orange;
+}
+
+#custom-power {
+  color: @green;
+  border-bottom: 2px solid @green;
+  padding: 0 12px;
+}
+
+#custom-updates {
+  color: @violet;
+  border-bottom: 2px solid @violet;
+  padding: 0 12px;
 }

@@ -1,6 +1,7 @@
 /* background tones */
 @define-color base #eee8d5;
 @define-color base2 #fdf6e3;
+@define-color base-dark #002b36;
 /* neutral tones */
 @define-color neutral0 #93a1a1;
 @define-color neutral1 #839496;

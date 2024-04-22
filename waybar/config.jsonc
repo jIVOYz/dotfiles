@@ -1,7 +1,7 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 24, // Waybar height (to be removed for auto height)
+  "height": 32, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
@@ -25,8 +25,8 @@
     "on-click": "playerctl play-pause --player spotify",
     "on-click-right": "playerctl next --player spotify",
     "on-click-middle": "playerctl previous --player spotify",
-    "on-scroll-up": "playerctl -p spotify volume 0.1+",
-    "on-scroll-down": "playerctl -p spotify volume 0.1-",
+    "on-scroll-up": "~/.config/hypr/scripts/changeVolume.sh up spotify",
+    "on-scroll-down": "~/.config/hypr/scripts/changeVolume.sh down spotify",
     "max-length": 25,
     "escape": true,
     "tooltip": true,
@@ -69,11 +69,11 @@
     "format-alt": "{:%a %d %b}",
   },
   "cpu": {
-    "format": "   {usage}%",
+    "format": "CPU: {usage}%",
     "tooltip": false,
   },
   "memory": {
-    "format": "    {}%",
+    "format": " RAM: {}%",
   },
   "backlight": {
     // "device": "acpi_video1",

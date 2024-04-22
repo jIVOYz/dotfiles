@@ -167,7 +167,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b\n%p\n%a"
+    format = "%i\n<b>%s</b>\n%b\n%p\n%a"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -184,7 +184,7 @@
 
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
-    ellipsize = middle
+    ellipsize = "Gruvbox Plus Dark"
 
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
@@ -205,7 +205,7 @@
     enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = Adwaita
+    icon_theme = "Gruvbox Plus Dark"
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
@@ -238,7 +238,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/xdg-open
+    browser = /usr/bin/firefox
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -420,7 +420,7 @@ frame_color = "#dc322f"
 #    skip_display = true
 
 #[history-ignore]
-appname = "Change volume"
+appname = ""
 history-ignore = yes
 
 #[skip-display]

@@ -60,20 +60,20 @@
     },
   },
   "tray": {
-    // "icon-size": 21,
+    "icon-size": 18,
     "spacing": 10,
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "󰅐  {:%a %d %b - (%H:%M)}",
+    "format": "{:%a %d %b - (%H:%M)}",
     "format-alt": "{:%a %d %b}",
   },
   "cpu": {
-    "format": "CPU: {usage}%",
+    "format": "  {usage}%",
     "tooltip": false,
   },
   "memory": {
-    "format": " RAM: {}%",
+    "format": "   {}%",
   },
   "backlight": {
     // "device": "acpi_video1",
@@ -96,7 +96,7 @@
 
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon}  {volume}%",
+    "format": "{icon}  {volume}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
@@ -128,12 +128,6 @@
     },
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates",
-  },
-
-  "custom/wallpaper": {
-    "format": "",
-    "on-click": "~/.config/hypr/scripts/swwallpaper.sh",
-    "tooltip": "Random wallpaper",
   },
 
   "custom/logo": {

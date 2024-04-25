@@ -6,8 +6,7 @@ wallpaper_location="$(ls "$wallpaper_folder" | sort | rofi -dmenu -hover-select 
 if [[ -d $wallpaper_folder/$wallpaper_location ]]; then
 	wallpaper_temp="$wallpaper_location"
 elif [[ -f $wallpaper_folder/$wallpaper_location ]]; then
-	swww img "$wallpaper_folder"/"$wallpaper_temp"/"$wallpaper_location"
+	swww img --transition-type any "$wallpaper_folder"/"$wallpaper_temp"/"$wallpaper_location"
 else
 	exit 1
 fi
-

@@ -1,4 +1,4 @@
-@import url("./themes/solarized-light.css");
+@import url("./themes/arc-dark.css");
 
 * {
   font-size: 16px;
@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background-color: @base;
+  background-color: @window-bg;
 }
 
 #workspaces {
@@ -17,7 +17,7 @@ window#waybar {
   transition: 0.3s all;
   padding: 0;
   margin: 0 4px;
-  color: @neutral3;
+  color: @gray;
 }
 
 #workspaces button:hover {
@@ -25,16 +25,13 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @magenta;
+  color: @green;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  /* margin: 2px 8px; */
-  /* background-color: @base; */
   padding: 2px 12px;
-  border-radius: 16px;
 }
 
 #cpu,
@@ -44,69 +41,66 @@ window#waybar {
 #backlight,
 #pulseaudio,
 #custom-power,
+#custom-logo,
 #custom-updates,
+#custom-spotify,
 #tray,
+#workspaces,
 #window,
 #language {
   padding: 0px 6px;
-  color: @green;
+  background-color: @item-bg;
+  border-radius: 4px;
+  margin: 1px 0;
+  padding: 0 12px;
 }
 
 #custom-spotify {
-  color: @green;
   padding: 0 12px;
-  border-radius: 12px;
+  color: @green;
 }
 
 #tray {
-  border-radius: 16px;
-  background: @neutral0;
   padding: 0 10px;
 }
 
 #custom-logo {
   color: @blue;
   margin-right: 8px;
+  padding: 0 12px 0 8px;
+  font-size: 18px;
 }
 
 #cpu {
-  color: @red;
-  border-bottom: 2px solid @red;
+  color: @orange;
 }
 
 #memory {
-  color: @blue;
-  border-bottom: 2px solid @blue;
+  color: @red;
 }
 
 #network {
-  color: @yellow;
-  border-bottom: 2px solid @yellow;
+  color: @gray;
 }
 
 #pulseaudio {
-  color: @cyan;
-  border-bottom: 2px solid @cyan;
+  color: @green;
 }
 
 #clock {
-  color: @magenta;
-  border-bottom: 2px solid @magenta;
+  color: @gray;
 }
 
 #language {
-  color: @orange;
-  border-bottom: 2px solid @orange;
+  color: @purple;
 }
 
 #custom-power {
-  color: @green;
-  border-bottom: 2px solid @green;
-  padding: 0 12px;
+  color: @red;
+  padding: 0 16px 0 12px;
 }
 
 #custom-updates {
-  color: @violet;
-  border-bottom: 2px solid @violet;
+  color: @purple;
   padding: 0 12px;
 }

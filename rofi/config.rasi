@@ -1,6 +1,5 @@
 configuration{
     modi: "run,drun,window";
-    icon-theme: "Gruvbox-Plus-Dark";
     show-icons: true;
     terminal: "alacritty";
     drun-display-format: "{icon} {name}";
@@ -11,106 +10,110 @@ configuration{
     display-run: "  Run ";
     display-window: "  Window";
     display-Network: "󰤨  Network";
+    font: "CaskaydiaCove Nerd Font 14";
     sidebar-mode: true;
 }
-@theme "theme.rasi"
+@theme "./themes/arc-dark.rasi"
 
 element-text, element-icon , mode-switcher {
-background-color: inherit;
-text-color:       inherit;
+  background-color: inherit;
+  text-color:       inherit;
 }
 
 window {
-width: 720px;
-height: 360px;
-background-color: @base2;
-border-radius: 10px;
+  width: 480px;
+  height: 560px;
+  background-color: @bg;
+  border-radius: 10px;
 }
 
 mainbox {
-background-color: @base2;
+  background-color: @bg;
 }
 
 inputbar {
-children: [prompt,entry];
-background-color: @base2;
-border-radius: 5px;
-padding: 2px;
+  children: [prompt,entry];
+  background-color: @bg;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 prompt {
-background-color: @base01;
-padding: 6px;
-text-color: @base2;
-border-radius: 3px;
-margin: 20px -15px 0px 10px;
+  background-color: @bg;
+  enabled: false;
+  padding: 6px;
+  text-color: @text;
+  border-radius: 3px;
+  margin: 20px -15px 0px 10px;
 }
 
 textbox-prompt-colon {
-expand: false;
-str: ":";
+  expand: false;
+  str: ":";
 }
 
 entry {
-padding: 6px;
-margin: 20px 0px 0px 10px;
-text-color: @base01;
-background-color: @base2;
-border-radius: 0px 4px 4px 0px;
-border: 2px;
-border-color: @base01;
+  padding: 6px;
+  margin: 20px 0px 0px 10px;
+  text-color: @text;
+  background-color: @bg;
+  border-radius: 4px;
+  border: 2px;
+  border-color: @border;
 }
 
 listview {
-border: 0px 0px 0px;
-padding: 6px;
-margin: 10px 0px 0px 10px;
-columns: 2;
-lines: 5;
-background-color: @base2;
+  border: 0px 0px 0px;
+  padding: 6px;
+  margin: 10px 0px 0px 10px;
+  columns: 1;
+  lines: 5;
+  background-color: @bg;
 }
 
 element {
-padding: 12px 8px;
-background-color: @base2;
-text-color: @base01;
+  padding: 8px;
+  background-color: @bg;
+  text-color: @text;
+  width: 25%;
 }
 
 element-icon {
-size: 32px;
+  size: 32px;
 }
 
 element selected {
-background-color:  @base1;
-text-color: @base2;
-border-radius: 4px;
+  background-color:  @bg-selected;
+  text-color: @text-selected;
+  border-radius: 4px;
 }
 
 mode-switcher {
-spacing: 0;
+  spacing: 0;
 }
 
 button {
-padding: 10px;
-background-color: @base1;
-vertical-align: 0.5;
-horizontal-align: 0.5;
+  padding: 10px;
+  background-color: @btn-bg;
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+  enabled: false;
 }
 
 button selected {
-background-color: @base0;
+  background-color: @btn-bg-selected;
 }
 
 message {
-background-color: @base02;
-margin: 2px;
-padding: 2px;
-border-radius: 5px;
+  background-color: @base;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 textbox {
-padding: 6px;
-margin: 20px 0px 0px 20px;
-text-color: @blue;
-background-color: @base02;
+  padding: 6px;
+  margin: 20px 0px 0px 20px;
+  text-color: @text;
+  background-color: @bg;
 }

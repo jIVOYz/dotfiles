@@ -1,0 +1,10 @@
+* {
+  base: #dfe2ee;
+  bg: #131521;
+  text: #dfe2ee;
+  border: #646985;
+  bg-selected: #2f313c;
+  text-selected: #dfe2ee;
+  btn-bg: #dfe2ee;
+  btn-bg-selected: #646985;
+}

@@ -1,6 +1,6 @@
 # Hyprland dotfiles
 
-List of most important dependencies:
+Dependencies:
 
 - Hyprland (Window Manager)
 - [Waybar](https://archlinux.org/packages/extra/x86_64/waybar/) (Static bar to your screen)
@@ -14,7 +14,6 @@ List of most important dependencies:
 - [wl-clipboard](https://aur.archlinux.org/packages/wl-clipboard-rs) (clipboard, needed to save screenshots in clipboard)
 - [Gammastep](https://archlinux.org/packages/extra/x86_64/gammastep/) (Night Shift)
 
-## Additional packages
 
 - [rofi-calc](https://archlinux.org/packages/extra/x86_64/rofi-calc/) (Calculator with rofi)
 - [python-gobject](https://archlinux.org/packages/extra/x86_64/python-gobject/) (to make spotify module working)

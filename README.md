@@ -1,5 +1,7 @@
 # Hyprland dotfiles
 
+![Preview Image](./preview.png)
+
 Dependencies:
 
 - Hyprland (Window Manager)

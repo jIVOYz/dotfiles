@@ -6,8 +6,8 @@ if status is-interactive
     alias lst="exa -l -g -T --icons -L=2"
     alias ll="exa -l -g --icons"
 
-    alias vim="nvim"
-
     alias g="git"
     alias gc="git clone"
+
+    set -gx EDITOR nvim
 end

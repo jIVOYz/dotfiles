@@ -1,10 +1,10 @@
 {
-  "gtkTheme": "Arc-Dark",
+  "gtkTheme": "Jasper-Dark",
   "themeName": "arc-dark",
-  "colorScheme": "Arc Dark",
-  "kvantumTheme": "KvArcDark",
-  "iconTheme": "Papirus",
+  "colorScheme": "Fluent Dark",
+  "kvantumTheme": "Fluent-Dark",
+  "iconTheme": "Honor",
   "vsCodeTheme": "Arc+",
   "nvimTheme": "tokyonight",
-  "kittyTheme": "Tokyo-Night-Storm"
+  "kittyTheme": "VSCode_Dark"
 }

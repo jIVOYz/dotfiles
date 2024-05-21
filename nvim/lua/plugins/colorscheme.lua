@@ -1,1 +1,3 @@
-/home/jivoy/.config/nvim/lua/plugins/themes/solarized_osaka.lua
+return {
+  "Mofiqul/vscode.nvim",
+}

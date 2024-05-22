@@ -9,8 +9,6 @@
   "modules-center": ["custom/spotify"],
   "modules-right": [
     "hyprland/language",
-    "cpu",
-    "memory",
     "network",
     "pulseaudio",
     "custom/updates",
@@ -65,7 +63,7 @@
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a %d %b - (%H:%M)}",
+    "format": "{:%H:%M}",
     "format-alt": "{:%a %d %b}",
   },
   "cpu": {

@@ -26,22 +26,23 @@ sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${ICON_THEME}" ~/.config/gt
 # gtk 4.0
 gsettings set org.gnome.desktop.interface gtk-theme $GTK_THEME
 gsettings set org.gnome.desktop.interface icon-theme $ICON_THEME
+sed -i "/^env = GTK_THEME/c\env = GTK_THEME,${GTK_THEME}" ~/.config/hypr/hyprland.conf
 
 # rofi
 killall rofi
 sed -i "/^@theme/c\@theme \"./themes/$THEME_NAME.rasi\"" ~/.config/rofi/config.rasi
 
 # dunst
-killall dunst
-if [ $THEME_NAME = "arc" ]; then
+if [ $THEME_NAME = "Light" ]; then
 	sed -i "/^background=/c\background=\"#dfe2ee\"" ~/.config/dunst/dunstrc
 	sed -i "/^foreground=/c\foreground=\"#646985\"" ~/.config/dunst/dunstrc
 
-elif [ $THEME_NAME = "arc-dark" ]; then
+elif [ $THEME_NAME = "Dark" ]; then
 	sed -i "/^background=/c\background=\"#2f312c\"" ~/.config/dunst/dunstrc
 	sed -i "/^foreground=/c\foreground=\"#dfe2ee\"" ~/.config/dunst/dunstrc
 fi
-notify-send -a "Theme Switch" $GTK_THEME
+killall dunst
+notify-send -a "Theme Switch" $THEME_NAME
 
 # neovim
 cp ~/.config/nvim/lua/plugins/themes/$NVIM_THEME.lua ~/.config/nvim/lua/plugins/colorscheme.lua

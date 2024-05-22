@@ -13,7 +13,7 @@ configuration{
     font: "CaskaydiaCove Nerd Font 14";
     sidebar-mode: true;
 }
-@theme "./themes/arc-dark.rasi"
+@theme "./themes/Dark.rasi"
 
 element-text, element-icon , mode-switcher {
   background-color: inherit;

@@ -1,5 +1,6 @@
-@define-color window-bg rgba(238,240,246,06);
-@define-color item-bg #dfe2ee;
+@define-color window-bg rgba(238,240,246,1);
+/*@define-color item-bg #dfe2ee;*/
+@define-color item-bg transparent;
 @define-color green #20a453;
 @define-color blue #526ce2;
 @define-color orange #db8630;

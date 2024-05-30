@@ -10,6 +10,13 @@ THEME_NAME=$(cat ~/.config/hypr/themes/$1/$1.json | jq -r ".themeName")
 NVIM_THEME=$(cat ~/.config/hypr/themes/$1/$1.json | jq -r ".nvimTheme")
 KITTY_THEME=$(cat ~/.config/hypr/themes/$1/$1.json | jq -r ".kittyTheme")
 
+# neovim
+cp ~/.config/nvim/lua/plugins/themes/$NVIM_THEME.lua ~/.config/nvim/lua/plugins/colorscheme.lua
+sed -i "/^colorscheme = \"/c\colorscheme=\"$NVIM_THEME\"" ~/.config/nvim/lua/config/lazy.lua
+
+# kitty terminal
+sed -i "/^include/c\include $KITTY_THEME.conf" ~/.config/kitty/kitty.conf
+
 # waybar
 killall waybar
 sed -i "/^@import/c\@import url(\"./themes/$THEME_NAME.css\");" ~/.config/waybar/style.css
@@ -26,7 +33,7 @@ sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${ICON_THEME}" ~/.config/gt
 # gtk 4.0
 gsettings set org.gnome.desktop.interface gtk-theme $GTK_THEME
 gsettings set org.gnome.desktop.interface icon-theme $ICON_THEME
-sed -i "/^env = GTK_THEME/c\env = GTK_THEME,${GTK_THEME}" ~/.config/hypr/hyprland.conf
+# sed -i "/^env = GTK_THEME/c\env = GTK_THEME,${GTK_THEME}" ~/.config/hypr/hyprland.conf
 
 # rofi
 killall rofi
@@ -43,10 +50,3 @@ elif [ $THEME_NAME = "Dark" ]; then
 fi
 killall dunst
 notify-send -a "Theme Switch" $THEME_NAME
-
-# neovim
-cp ~/.config/nvim/lua/plugins/themes/$NVIM_THEME.lua ~/.config/nvim/lua/plugins/colorscheme.lua
-sed -i "/^colorscheme = \"/c\colorscheme=\"$NVIM_THEME\"" ~/.config/nvim/lua/config/lazy.lua
-
-# kitty terminal
-sed -i "/^include/c\include $KITTY_THEME.conf" ~/.config/kitty/kitty.conf

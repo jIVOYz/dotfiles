@@ -5,8 +5,8 @@
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["custom/logo", "hyprland/workspaces", "tray"],
-  "modules-center": ["custom/spotify"],
+  "modules-left": ["hyprland/workspaces", "cpu", "memory", "tray"],
+  "modules-center": ["custom/spotify", "hyprland/window"],
   "modules-right": [
     "hyprland/language",
     "network",
@@ -93,12 +93,12 @@
   },
 
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{icon}  {volume}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "scroll-step": 5, // %, can be a float
+    "format": "{icon} {volume}",
+    "format-bluetooth": "{volume} {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
+    "format-muted": "    Muted",
+    "format-source": " {volume}",
     "format-source-muted": " ",
     "format-icons": {
       "headphone": " ",
@@ -107,7 +107,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", "󰕾 "],
+      "default": ["", "  ", "   "],
     },
     "on-click": "~/.config/hypr/scripts/rofi_volume_menu.sh",
   },

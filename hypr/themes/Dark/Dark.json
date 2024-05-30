@@ -1,9 +1,9 @@
 {
-  "gtkTheme": "Fluent-Dark",
+  "gtkTheme": "Breeze-Dark",
   "themeName": "Dark",
   "colorScheme": "Dark",
   "kvantumTheme": "Fluent-Dark",
-  "iconTheme": "Win10Sur-blue",
-  "nvimTheme": "tokyonight",
+  "iconTheme": "Win10Sur",
+  "nvimTheme": "vscode",
   "kittyTheme": "VSCode_Dark"
 }
